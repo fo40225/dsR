@@ -1,0 +1,49 @@
+---
+title: 'Week3 Lab: 習題與作業'
+author: "姓名 / 學號 / 系所 /"
+output: html_notebook
+---
+
+這份文件可以當成習題繳交的樣本。
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+繳交 `html` 檔格式，上傳到 `ceiba`。
+
+# 習題一：練習安裝套件與作業繳交格式
+
+> 安裝 `leaflet` 線上互動地圖套件，(利用 google map) 找出你的系所經緯度，
+修改以下的程式，顯示地圖出來。（以下是醉月湖供參考）
+
+```{r, echo=TRUE}
+# install.packages("leaflet")
+library(leaflet)
+DerTianHall <- leaflet()
+DerTianHall <- addTiles(DerTianHall)
+DerTianHall <- addMarkers(DerTianHall, lng = 121.541443, lat = 25.019419, popup="NTU Der Tian Hall")
+DerTianHall
+```
+
+
+# 作業一
+> 建立一個向量 x, 將 1 到 6 的每一個數字依次重複 3 次。
+
+```{r}
+x <- rep(1:6, times=1, each=3)
+x
+```
+
+
+# 作業二：
+> 閱讀與練習線上課程：
+[Datacamp.Unit.1-2](https://www.datacamp.com/courses/free-introduction-to-r)
